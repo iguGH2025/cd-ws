@@ -1,5 +1,6 @@
 import "./globals.css";
 import "./theme.css"; // tema stilleri
+import "./responsive.css"; // responsive stiller
 
 export const metadata = {
   title: "c-dersleri — IGÜ C Projesi Tanıtım",

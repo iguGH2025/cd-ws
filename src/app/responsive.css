@@ -1,0 +1,424 @@
+/* ==========================================================
+   RESPONSIVE LAYER — mobile-first
+   Bu dosya, mevcut genel stillerin (globals.css / theme.css)
+   üstüne sadece kırılım başına minör ayarlar uygular.
+   ========================================================== */
+
+/* Erişilebilirlik: animasyon azalt */
+@media (prefers-reduced-motion: reduce) {
+
+    html.theme-ready body,
+    html.theme-ready .header,
+    html.theme-ready .badge,
+    html.theme-ready .card,
+    html.theme-ready .note {
+        transition: none !important;
+    }
+}
+
+/* ------------------------------
+   0) TABAN ( < 480px )
+   ------------------------------ */
+/* Çok küçük telefonlar için tipografiyi sıkı tut */
+.hero {
+    padding: 64px 0 72px;
+}
+
+.hero .title {
+    font-size: clamp(24px, 8vw, 32px);
+    line-height: 1.18;
+}
+
+.hero p {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.badge {
+    padding: 8px 10px;
+    border-radius: 10px;
+    font-size: 12px;
+}
+
+.header-inner {
+    min-height: 58px;
+    padding: 6px 10px;
+    gap: 8px;
+}
+
+.header .nav a {
+    padding: 8px 10px;
+    font-size: 13px;
+}
+
+.section {
+    padding-inline: 12px;
+}
+
+.grid {
+    gap: 16px;
+}
+
+.card {
+    padding: 16px;
+    border-radius: 10px;
+}
+
+.note {
+    padding: 12px 12px 12px 16px;
+    border-radius: 10px;
+}
+
+.avatar {
+    width: 56px;
+    height: 56px;
+}
+
+.footer-inner {
+    padding: 16px 0;
+}
+
+/* ------------------------------
+   1) 480px — Küçük telefonlar
+   ------------------------------ */
+@media (min-width: 480px) {
+    .hero {
+        padding: 72px 0 84px;
+    }
+
+    .hero .title {
+        font-size: clamp(28px, 7vw, 36px);
+    }
+
+    .hero .cta {
+        gap: 10px;
+    }
+
+    .badge {
+        padding: 9px 12px;
+        font-size: 12.5px;
+    }
+
+    .header .nav a {
+        padding: 9px 12px;
+    }
+
+    .section {
+        padding-inline: 16px;
+    }
+
+    .grid {
+        gap: 18px;
+    }
+}
+
+/* ------------------------------
+   2) 600px — Orta telefonlar / phablet
+   ------------------------------ */
+@media (min-width: 600px) {
+    .hero {
+        padding: 84px 0 96px;
+    }
+
+    .hero .title {
+        font-size: clamp(30px, 6vw, 40px);
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .header-inner {
+        min-height: 60px;
+        padding: 8px 12px;
+    }
+
+    .header .nav {
+        gap: 6px;
+    }
+
+    .header .nav a {
+        padding: 10px 12px;
+        font-size: 13.5px;
+    }
+
+    .grid {
+        gap: 20px;
+    }
+
+    .avatars {
+        gap: 20px;
+    }
+}
+
+/* ------------------------------
+   3) 768px — Tablet dikey
+   ------------------------------ */
+@media (min-width: 768px) {
+    .section {
+        max-width: 960px;
+    }
+
+    .hero {
+        padding: 96px 0 112px;
+    }
+
+    .hero .title {
+        font-size: clamp(32px, 5vw, 44px);
+    }
+
+    .hero p {
+        font-size: 17px;
+        line-height: 1.65;
+    }
+
+    .hero .cta {
+        gap: 12px;
+    }
+
+    .header-inner {
+        min-height: 64px;
+        padding: 10px 16px;
+    }
+
+    .header .nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        row-gap: 6px;
+    }
+
+    .header .nav a {
+        padding: 10px 14px;
+        font-size: 14px;
+    }
+
+    .badge {
+        padding: 10px 14px;
+        font-size: 12.8px;
+    }
+
+    .grid.cols-2 {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .note {
+        padding: 14px 14px 14px 18px;
+    }
+}
+
+/* ------------------------------
+   4) 900px — Tablet yatay / küçük laptop
+   ------------------------------ */
+@media (min-width: 900px) {
+    .section {
+        max-width: 1024px;
+    }
+
+    .header-inner {
+        min-height: 66px;
+        padding: 10px 18px;
+    }
+
+    .brand {
+        font-size: 16px;
+    }
+
+    .header .nav {
+        flex: 1 1 100%;
+    }
+
+    .header .nav a {
+        padding: 10px 16px;
+    }
+
+    .badge {
+        padding: 10px 14px;
+    }
+
+    .hero .title {
+        font-size: clamp(34px, 4.2vw, 48px);
+    }
+}
+
+/* ------------------------------
+   5) 1024px — Standart laptop
+   ------------------------------ */
+@media (min-width: 1024px) {
+    .section {
+        max-width: 1120px;
+    }
+
+    .hero {
+        padding: 100px 0 120px;
+    }
+
+    .hero .title {
+        font-size: clamp(36px, 3.6vw, 52px);
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .grid {
+        gap: 22px;
+    }
+
+    .card {
+        padding: 22px;
+    }
+
+    .note {
+        padding: 16px 16px 16px 20px;
+    }
+
+    .avatar {
+        width: 64px;
+        height: 64px;
+    }
+}
+
+/* ------------------------------
+   6) 1280px — Büyük laptop / masaüstü
+   ------------------------------ */
+@media (min-width: 1280px) {
+    .section {
+        max-width: 1200px;
+    }
+
+    .header-inner {
+        max-width: 1200px;
+    }
+
+    .hero {
+        padding: 108px 0 128px;
+    }
+
+    .hero .title {
+        font-size: clamp(40px, 3.2vw, 56px);
+    }
+
+    .grid {
+        gap: 24px;
+    }
+
+    .grid.cols-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* gelecekte 3'lü grid ihtiyacı */
+}
+
+/* ------------------------------
+   7) 1440px — Geniş masaüstü
+   ------------------------------ */
+@media (min-width: 1440px) {
+    .section {
+        max-width: 1280px;
+    }
+
+    .header-inner {
+        max-width: 1280px;
+    }
+
+    .hero {
+        padding: 116px 0 140px;
+    }
+
+    .hero .title {
+        font-size: 56px;
+    }
+
+    .card {
+        padding: 24px;
+    }
+}
+
+/* ------------------------------
+   8) 1920px — Çok geniş ekran
+   ------------------------------ */
+@media (min-width: 1920px) {
+
+    /* İçeriği gereksiz büyütme; okunaklı sınırlar */
+    .section {
+        max-width: 1360px;
+    }
+
+    .header-inner {
+        max-width: 1360px;
+    }
+
+    .hero {
+        padding: 124px 0 152px;
+    }
+}
+
+/* ------------------------------
+   YATAY KAYDIRMA / NAV kullanımı
+   Küçük ekran: kaydır, büyükte sardır.
+   ------------------------------ */
+@media (max-width: 899.98px) {
+    .nav {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    .nav::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+/* ------------------------------
+   ORYANTASYON FİNESSE (opsiyonel)
+   ------------------------------ */
+@media (orientation: landscape) and (max-height: 480px) {
+    .hero {
+        padding: 48px 0 56px;
+    }
+
+    .hero .title {
+        font-size: clamp(22px, 6vw, 30px);
+    }
+}
+
+/* ------------------------------
+   BİLEŞEN ODAKLI MİNOR AYARLAR
+   ------------------------------ */
+@media (max-width: 480px) {
+
+    /* Kart içindeki pre/code taşmalarını engelle */
+    pre,
+    code {
+        white-space: pre-wrap;
+        word-break: break-word;
+    }
+}
+
+@media (min-width: 768px) {
+
+    /* Footer hizalama tablet ve üstünde yan yana */
+    .footer-inner {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+/* ------------------------------
+   KONTEYNER — HEADER full-bleed,
+   içerik .section ile hizalı yaklaşımı koru
+   ------------------------------ */
+@media (min-width: 0px) {
+    .header {
+        width: 100%;
+    }
+
+    .header-inner {
+        width: 100%;
+    }
+}
