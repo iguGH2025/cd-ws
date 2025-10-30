@@ -1,0 +1,128 @@
+/* Tema değişkenleri: varsayılan = aydınlık */
+:root {
+    --ink: #111111;
+    --paper: #ffffff;
+    --grayline: #e5e5e5;
+    --muted: rgba(0, 0, 0, .8);
+
+    --elev-1: rgba(0, 0, 0, .04);
+    /* gölge/hover yardımcıları */
+    --elev-2: rgba(0, 0, 0, .06);
+}
+
+/* Karanlık tema */
+body.dark-theme {
+    --ink: #f4f4f5;
+    --paper: #0c0c0d;
+    --grayline: #2a2a2a;
+    --muted: rgba(255, 255, 255, .82);
+
+    --elev-1: rgba(255, 255, 255, .06);
+    --elev-2: rgba(255, 255, 255, .10);
+}
+
+/* Yumuşak geçiş (renk değişiminde) */
+body.theme-ready body,
+body.theme-ready .header,
+body.theme-ready .badge,
+body.theme-ready .card,
+body.theme-ready .note {
+    transition: background-color .25s ease, color .25s ease, border-color .25s ease, box-shadow .25s ease;
+}
+
+/* Karanlıkta yüzeylerin ayarı */
+body.dark-theme body {
+    background: var(--paper);
+    color: var(--ink);
+}
+
+body.dark-theme .header {
+    background: rgba(20, 20, 22, .9);
+    border-bottom-color: var(--grayline);
+    box-shadow: 0 1px 8px var(--elev-1);
+}
+
+body.dark-theme .header .nav a:hover {
+    background: rgba(255, 255, 255, .06);
+}
+
+body.dark-theme .badge {
+    background: transparent;
+    border-color: var(--ink);
+    box-shadow: 0 1px 0 var(--elev-1), 0 2px 8px var(--elev-2);
+}
+
+body.dark-theme .badge:hover {
+    background: var(--ink);
+    color: #111;
+    /* koyuda buton hover = açık yazı üstüne koyu arka planın tersi */
+}
+
+body.dark-theme .card {
+    background: #121214;
+    border-color: var(--grayline);
+}
+
+body.dark-theme .note {
+    background: rgba(255, 255, 255, .05);
+}
+
+/* Tema düğmesi */
+.theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border-radius: 10px;
+    border: 1px solid var(--grayline);
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+    font-size: 12.5px;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    box-shadow: 0 1px 0 var(--elev-1);
+}
+
+.theme-toggle:hover {
+    background: var(--elev-1);
+}
+
+.theme-toggle:active {
+    transform: translateY(1px);
+}
+
+.theme-toggle svg {
+    width: 16px;
+    height: 16px;
+    display: block;
+}
+
+/* Tema düğmesi ikonu: güneş/ay */
+body.dark-theme .icon-sun {
+    display: none;
+}
+
+body:not(.dark-theme) .icon-moon {
+    display: none;
+}
+
+/* Footer - dark fix */
+body.dark-theme footer {
+    border-top-color: var(--grayline);
+    background: transparent;
+}
+
+body.dark-theme .footer-inner {
+    color: var(--ink);
+    /* beyaz metin */
+}
+
+body.dark-theme .footer-links a {
+    color: var(--ink);
+    text-decoration-color: rgba(255, 255, 255, .55);
+}
+
+body.dark-theme .footer-links a:hover {
+    text-decoration-color: currentColor;
+}
