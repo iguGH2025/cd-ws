@@ -9,3 +9,4 @@
     - `git clone https://github.com/iguGH2025/cd-ws/`
     - `npm i` hata verirse: `npm install --force`
     - calistirma: `npm run dev`
+    - adres: [`https://localhost:3000`](http://localhost:3000)
