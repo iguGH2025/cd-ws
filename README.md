@@ -3,7 +3,7 @@
 
 ## KURULUM
 
-- kurulum oncesi [git](https://git-scm.com/install/) ve [git cli](https://cli.github.com/) kurulu oldugundan emim olun.
+- kurulum oncesi [git](https://git-scm.com/install/) ve [git cli](https://cli.github.com/) kurulu oldugundan emin olun.
 
 - kurulum:
     - `git clone https://github.com/iguGH2025/cd-ws/`
