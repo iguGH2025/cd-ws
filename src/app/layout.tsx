@@ -1,6 +1,7 @@
 import "./globals.css";
 import "./theme.css"; // tema stilleri
 import "./responsive.css"; // responsive stiller
+import "./GithubTables.css"
 
 export const metadata = {
   title: "c-dersleri — IGÜ C Projesi Tanıtım",
@@ -37,9 +38,13 @@ const themeInit = `
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="tr">
-      <head><script dangerouslySetInnerHTML={{ __html: themeInit }} /></head>
-      <body>{children}</body>
+    <html lang="tr" suppressHydrationWarning>
+      <head>
+        {/* Tema init script’in kalsın */}
+        <meta name="color-scheme" content="light dark" />
+        <script dangerouslySetInnerHTML={{ __html: themeInit }} />
+      </head>
+      <body suppressHydrationWarning>{children}</body>
     </html>
   );
 }

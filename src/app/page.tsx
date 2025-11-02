@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import GithubTables from "./components/GithubTables";
 
 const NAV = [
   { id: "home", label: "Ana Sayfa" },
@@ -80,35 +81,52 @@ export default function Page() {
         </div>
       </header>
 
-
-      {/* Hero */}
       <section id="home" className="section hero">
-        <div style={{ maxWidth: 750 }}>
-          <div className="badge" style={{ marginBottom: 16 }}>
-            IGÜ · Yazılım Mühendisliği · C
+        <div className="hero-content" style={{ display: "flex", alignItems: "center", gap: 48, justifyContent: "space-between" }}>
+          <div style={{ flex: 1, maxWidth: 750 }}>
+            <div className="badge" style={{ marginBottom: 16 }}>
+              IGÜ · Yazılım Mühendisliği · C
+            </div>
+            <h1 className="title">C Dersleri (c-dersleri)</h1>
+            <p>
+              İstanbul Gelişim Üniversitesi Yazılım Mühendisliği öğrencileri için
+              ortak C projesi. Disiplinli pratik, açık kaynak katkı geçmişi ve
+              gerçek Git–GitHub akışı.
+            </p>
+            <div className="cta">
+              <a className="badge" href="#amac">Projenin Amacı</a>
+              <a className="badge" href="#indirme">Kurulum &amp; Akış</a>
+              <a
+                className="badge"
+                href="https://github.com/iguGH2025/c-dersleri/tree/main/Proje_Kullanim_Klavuzu"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Kullanım Klavuzu
+              </a>
+            </div>
           </div>
-          <h1 className="title">C Dersleri (c-dersleri)</h1>
-          <p>
-            İstanbul Gelişim Üniversitesi Yazılım Mühendisliği öğrencileri için
-            ortak C projesi. Disiplinli pratik, açık kaynak katkı geçmişi ve
-            gerçek Git–GitHub akışı.
-          </p>
-          <div className="cta">
-            <a className="badge" href="#amac">Projenin Amacı</a>
-            <a className="badge" href="#indirme">Kurulum &amp; Akış</a>
-            <a
-              className="badge"
-              href="https://github.com/iguGH2025/c-dersleri/tree/main/Proje_Kullanim_Klavuzu"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Kullanım Klavuzu
-            </a>
+          <div>
+            <img
+              src="./cp.png"
+              alt="cp"
+              loading="lazy"
+              style={{
+                width: 260,
+                maxWidth: "40vw",
+                height: "auto",
+                borderRadius: 8,
+                boxShadow: "0 8px 24px rgba(0,0,0,0.12)",
+              }}
+            />
           </div>
         </div>
       </section>
 
+
       <div className="hr" />
+
+      <GithubTables />
 
       {/* PROJENİN AMACI */}
       <section id="amac" className="section" style={{ padding: "64px 0" }}>

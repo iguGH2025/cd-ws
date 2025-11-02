@@ -422,3 +422,24 @@
         width: 100%;
     }
 }
+
+/* ! */
+
+/* HERO düzeni: mobilde görsel üstte */
+@media (max-width: 768px) {
+    .hero .hero-content {
+        flex-direction: column-reverse;
+        /* metin alta, görsel üste */
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero .hero-content img {
+        max-width: 80%;
+        margin-bottom: 24px;
+    }
+
+    .hero .cta {
+        justify-content: center;
+    }
+}

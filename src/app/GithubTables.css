@@ -1,0 +1,69 @@
+.github-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1em;
+    color: #ccc;
+}
+
+.github-table th,
+.github-table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+}
+
+.github-table th {
+    background-color: #f5f5f5;
+    text-align: left;
+}
+
+.github-table tbody tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+/* Dark theme support */
+@media (prefers-color-scheme: dark) {
+    .github-table th {
+        background-color: #333;
+        color: #fff;
+    }
+
+    .github-table td,
+    .github-table th {
+        border-color: #555;
+    }
+
+    .github-table tbody tr:nth-child(even) {
+        background-color: #444;
+    }
+
+    .github-table tbody tr:nth-child(odd) {
+        background-color: #333;
+    }
+}
+
+/* ! */
+
+/* Mobilde yatay kaydırılabilir tablo */
+.github-table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-collapse: collapse;
+}
+
+.github-table table {
+    width: 100%;
+    border-collapse: collapse;
+    /* min-width: 600px; */
+    /* çok dar ekranda içeriği sıkıştırmak yerine kaydırma sağlar */
+}
+
+.github-table::-webkit-scrollbar {
+    height: 6px;
+}
+
+.github-table::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+}
