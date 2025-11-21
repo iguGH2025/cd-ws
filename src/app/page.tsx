@@ -355,6 +355,12 @@ git push origin main`}</pre>
           <a className="avatar" href="https://github.com/sara-rezk" target="_blank" rel="noreferrer">
             <img src="https://avatars.githubusercontent.com/sara-rezk" alt="sara-rezk" width={70} height={70} />
           </a>
+          <a className="avatar" href="https://github.com/qusaitahan2007-debug" target="_blank" rel="noreferrer">
+            <img src="https://avatars.githubusercontent.com/qusaitahan2007-debug" alt="qusaitahan2007-debug" width={70} height={70} />
+          </a>
+          <a className="avatar" href="https://github.com/65SH" target="_blank" rel="noreferrer">
+            <img src="https://avatars.githubusercontent.com/65SH" alt="65SH" width={70} height={70} />
+          </a>
         </div>
         <div className="note" style={{ marginTop: 16 }}>
           <p style={{ margin: 0, fontWeight: 600 }}>Not</p>
